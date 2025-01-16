@@ -42,7 +42,8 @@ jobs:
           aws-region: us-east-1
 
       - name: Setup kubectl
-        run: echo "Running aws eks update-kubeconfig"
+        run: aws eks update-kubeconfig --name live-devops-eks
+        
       - name: Deploy Kubernetes
         run: echo "Running kubectl apply"
     
